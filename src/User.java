@@ -8,12 +8,12 @@ public class User {
     ArrayList<Stock> sellReservationList;
 
     /*Constructor*/
-    public static User Asset (long asset) {
+    public static User asset (long asset) {
         User user = new User();
         user.asset = asset;
         return user;
     }
-    public static User Asset (String asset) {
+    public static User asset (String asset) {
         User user = new User();
         long preAsset = Long.parseLong(asset.substring(0, asset.length()-1));
         switch (asset.substring(asset.length()-1)) {
