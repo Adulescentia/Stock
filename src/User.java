@@ -8,6 +8,7 @@ public class User {
     ArrayList<Stock> sellReservationList;
 
     /*Constructor*/
+        /*Asset*/
     public static User asset (long asset) {
         User user = new User();
         user.asset = asset;

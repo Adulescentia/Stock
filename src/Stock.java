@@ -33,11 +33,16 @@ abstract class Stock {
 
 class Samsung extends Stock {
 
-    final int totalAmount = 1000;
+    /*Vars*/
+    StockInfo SamsungInfo = StockInfo.SAMSUNG;
+
+    /*Constructor*/
     Samsung(int price, int charge, int amount) {
         super(price, charge, amount);
     }
+
+    /*Methods*/
     void updateTotalPrice(){
-        totalPrice = price * totalAmount;
+        totalPrice = price * SamsungInfo.getTotalAmount();
     }
 }
