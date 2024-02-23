@@ -16,17 +16,20 @@ public class User {
     }
     public static User asset (String asset) {
         User user = new User();
-        long preAsset = Long.parseLong(asset.substring(0, asset.length()-1));
-        switch (asset.substring(asset.length()-1)) {
-            case "K": user.asset = preAsset * 1000;
+        long preAsset = Long.parseLong(asset.substring(0, asset.length() - 1));
+        switch (asset.substring(asset.length() - 1)) {
+            case "K":
+                user.asset = preAsset * 1000;
                 break;
-            case "M": user.asset = preAsset * 1000000;
+            case "M":
+                user.asset = preAsset * 1000000;
                 break;
-            case "B": user.asset = preAsset * 1000000000;
+            case "B":
+                user.asset = preAsset * 1000000000;
                 break;
-            default: user.asset = preAsset;
+            default:
+                user.asset = preAsset;
         }
         return user;
     }
-
 }

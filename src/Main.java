@@ -3,5 +3,7 @@ public class Main {
         Market market = new Market();
         market.testUser(); //temp
         market.testStock(); //temp
+        market.listUpStocks();
+        market.printStocks();
     }
 }
