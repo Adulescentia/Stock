@@ -3,6 +3,7 @@ import java.util.ArrayList;
 class Stock {
 
     /*Vars*/
+    int identificationNumber;
     String name;
     ArrayList<Integer> buyList;
     ArrayList<Integer> sellList;
@@ -10,13 +11,13 @@ class Stock {
     int totalPrice;     //시가 총액
     int charge;         //수수료
     int volatility;     //변동성
-    int totalAmount;
+    int amountOfOutstandingStocks;//발행량
     int amount;         //구매량
 
 
     /*Constructor*/
-    Stock(String name, int price, int charge, int amount) {
-        this.name = name;
+    Stock(int identificationNumber, int price, int charge, int amount) {
+        this.identificationNumber = identificationNumber;
         this.price = price;
         this.charge = charge;
         this.amount = amount;
@@ -32,8 +33,9 @@ class Stock {
     }
     String getName() {return name;}
     int getTotalPrice() {
-        totalPrice = price * totalAmount;
+        totalPrice = price * amountOfOutstandingStocks;
         return totalPrice;
     }
+
 
 }

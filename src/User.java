@@ -4,9 +4,7 @@ public class User {
 
     /*Vars*/
     long asset;
-    ArrayList<Stock> buyReservationList;
-    ArrayList<Stock> sellReservationList;
-
+    ArrayList<Stock> stockHoldings = new ArrayList<>();
     /*Constructor*/
         /*Asset*/
     public static User asset (long asset) {
@@ -31,5 +29,9 @@ public class User {
                 user.asset = preAsset;
         }
         return user;
+    }
+    /*Methods*/
+    void buyStocks (Stock stock, int price, int amount) {
+        stockHoldings.add(new Stock(1, 1, 1, 1));//temp
     }
 }

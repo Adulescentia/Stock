@@ -6,7 +6,7 @@ public class Market {
     int tendency;
     ArrayList<Stock> stockList = new ArrayList<Stock>();
     User user = User.asset("1M");
-    Stock samsung = new Stock("Samsung",100, 2, 10);
+    Stock samsung = new Stock(1,100, 2, 10);
 
 
 
